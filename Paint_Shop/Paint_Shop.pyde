@@ -29,34 +29,35 @@ def setup():
 
     
 def draw():
-    if mousePressed and mouseX > 120:
+    if mousePressed and mouseX > 130:
         if mousePressed and mouseY < 280:
-            line(pmouseX,pmouseY,mouseX,mouseY)
+            if mousePressed and mouseY > 80:
+                line(pmouseX,pmouseY,mouseX,mouseY)
         
 def mouseClicked():
     if mouseX > 65 or mouseX < 85:         # Set yellow button location
         if mouseY > 310 or mouseY < 330:  
-            stroke(255,100,0) 
+            stroke(255,255,0) 
     elif mouseX > 85 or mouseX < 105:      # Set orange button location
         if mouseY > 310 or mouseY < 330:   
-            stroke(155,0,155) 
+            stroke(255,100,0) 
     elif mouseX > 105 or mouseX < 125:     # Set purple button location
         if mouseY > 310 or mouseY < 330:   
-            stroke(255,255,0) 
+            stroke(155,0,155) 
     elif mouseX > 125 or mouseX < 145:     # Set pink button location
         if mouseY > 310 or mouseY < 330:   
             stroke(355,0,255)
     elif mouseX > 85 or mouseX < 105:      # Set blue button location
         if mouseY > 330 or mouseY < 310:   
-            stroke()
+            stroke(0,0,255)
     elif mouseX > 85 or mouseX < 105:      # Set red button location
         if mouseY > 330 or mouseY < 310:   
-            stroke()
+            stroke(255,0,0)
     elif mouseX > 85 or mouseX < 105:      # Set green button location
         if mouseY > 330 or mouseY < 310:   
-            stroke()
+            stroke(0,255,0)
     elif mouseX > 85 or mouseX < 105:      # Set black button location
         if mouseY > 330 or mouseY < 310:   
-            stroke()
+            stroke(0)
         else:
             stroke(random(255),random(255),random(255))
